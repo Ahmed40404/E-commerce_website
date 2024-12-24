@@ -1,0 +1,29 @@
+﻿<div class="container mt-5">
+    <h2 class="mb-4 text-center">Add New Product</h2>
+    <form action="/Products/Create" method="post" enctype="multipart/form-data" class="row g-3">
+        <div class="col-md-6">
+            <label for="productName" class="form-label">Product Name</label>
+            <input type="text" name="productName" id="productName" class="form-control" placeholder="Enter product name" required />
+        </div>
+
+        <div class="col-md-12">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="description" id="description" class="form-control" rows="4" placeholder="Enter product description" required></textarea>
+        </div>
+
+        <div class="col-md-6">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" name="price" id="price" class="form-control" step="0.01" placeholder="Enter product price" required />
+        </div>
+
+        <div class="col-md-6">
+            <label for="file" class="form-label">Upload Image</label>
+            <input type="file" name="file" id="file" class="form-control"  required />
+        </div>
+
+        <div class="col-12 text-center mt-4">
+            <button type="submit" class="btn btn-primary btn-lg">Save Product</button>
+            <a href="/Products/Index" class="btn btn-secondary btn-lg">Cancel</a>
+        </div>
+    </form>
+</div>

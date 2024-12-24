@@ -1,0 +1,35 @@
+﻿
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Edit Product</h2>
+    <form action="/Products/Edit" method="post" enctype="multipart/form-data" class="row g-3">
+        <input type="hidden" name="ProductId" value="@Model.ProductId" />
+
+        <div class="col-md-6">
+            <label for="ProductName" class="form-label">Product Name</label>
+            <input type="text" name="ProductName" id="ProductName" class="form-control" value="@Model.ProductName" required />
+        </div>
+
+        <div class="col-md-12">
+            <label for="Description" class="form-label">Description</label>
+            <textarea name="Description" id="Description" class="form-control" rows="4" required>@Model.Description</textarea>
+        </div>
+
+        <div class="col-md-6">
+            <label for="Price" class="form-label">Price</label>
+            <input type="number" name="Price" id="Price" class="form-control" value="@Model.Price" step="0.01" required />
+        </div>
+
+        <div class="col-md-6">
+            <label for="Image" class="form-label">Upload New Image (Optional)</label>
+            <input type="file" name="image" id="Image" class="form-control" />
+        </div>
+
+        <div class="col-12 text-center mt-4">
+            <button type="submit" class="btn btn-primary btn-lg">Update Product</button>
+            <a href="/Products/Index" class="btn btn-secondary btn-lg">Cancel</a>
+        </div>
+    </form>
+</div>
+
+
